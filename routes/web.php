@@ -13,18 +13,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\ClientController;
 
-Route::get('/', [EventController::class, 'index']);
+
+Route::get('/', [EventController::class, 'index'])->middleware('auth');
 Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
-Route::get('/events/{id}', [EventController::class, 'show']);
-Route::post('/events', [EventController::class, 'store']);
+Route::get('/events/{id}', [EventController::class, 'show'])->middleware('auth');
+Route::post('/events', [EventController::class, 'store'])->middleware('auth');
 Route::delete('/events/{id}', [EventController::class, 'destroy'])->middleware('auth');
 Route::get('/events/edit/{id}', [EventController::class, 'edit'])->middleware('auth');
 Route::put('/events/update/{id}', [EventController::class, 'update'])->middleware('auth');
 
+
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/clients', function () {
+    return view('clients.client');
+});
+
+Route::get('/clients/create', [ClientController::class, 'create'])->middleware('auth');
+Route::post('/clients', [ClientController:: class, 'store'])->middleware('auth');
+Route::get('/clients/{id}', [EventController::class, 'show'])->middleware('auth');
+
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 

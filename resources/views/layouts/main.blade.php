@@ -24,8 +24,13 @@
                 <ul class="navbar-nav">
                     
                     <li class="nav-item">
+                        <a href="/clients/create" class="nav-link">Adicionar Clientes</a>
+                    </li>
+                    
+                    <li class="nav-item">
                         <a href="/events/create" class="nav-link">Adicionar Contratos</a>
                     </li>
+                    
                     @auth
                     <li class="nav-item">
                         <a href="/dashboard" class="nav-link">Meus Contratos</a>
