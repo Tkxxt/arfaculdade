@@ -10,8 +10,12 @@ use App\Models\Client;
 
 class ClientController extends Controller
 {
-    public function client(){
-        return view('/clients.client');
+    public function index(){
+        
+        $clients = Client::all();
+        
+        return view('clients.client', ['clients' => $clients ]);
+
     }
 
     public function create(){
@@ -34,4 +38,6 @@ class ClientController extends Controller
         return redirect('/clients')->with('msg', 'Cliente Adicionado');
 
     }
+
+ 
 }
