@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Controllers\EventController;
 use Illuminate\Http\Request;
 
 use App\Models\User;
@@ -39,5 +39,10 @@ class ClientController extends Controller
 
     }
 
+    public function show($id) {
+        $client = Client::findOrFail($id);
+
+        return view('clients.edit', ['client' => $client]);
+    }
  
 }

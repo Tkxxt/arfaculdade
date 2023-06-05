@@ -14,7 +14,11 @@
     </div>
     <div class="form-group">
         <label for="title">Cliente:</label>
-        <input type="text" class="form-control" id="title" name="title" placeholder="Nome do Cliente/Empresa">
+        <select id="title" name="title" class="form-control">
+        @foreach($clients as $client)
+        <option value="{{ $client->nome }}">{{ $client->nome }}</option>
+        @endforeach
+        </select>
     </div>
     <div class="form-group">
         <label for="date">Data do Servico:</label>

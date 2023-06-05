@@ -6,7 +6,7 @@
 
 
 <div class="col-md-10 offset-md-1 dashboard-title-container">
-    <h1>Meus Contratos:</h1>
+    <h1>Meus Clientes:</h1>
 </div>
 <div class="col-md-10 offset-md-1 dashboard-client-container">
     @if(count($clients) > 0)
@@ -35,6 +35,8 @@
         </tr>
         @endforeach
     </tbody>
+
+</select>
     </table>
     @else
     <p>Voce não tem Clientes, <a href="/clients/create">Adicione Clientes</a></p>
