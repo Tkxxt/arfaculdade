@@ -29,11 +29,13 @@
             <td>{{ $event->description }}</td>
             <td>{{ date('d/m/Y', strtotime($event->date)) }}</td>
             <td>
-                <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon> Editar</a> 
+                <a href="/events/edit/{{ $event->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon></a> 
                 <form action="/events/{{ $event->id }}" method="POST">
+                <a href="/img/events/{{ $event->image }}" download="{{ $event->title }}" class="btn btn-info down-btn"><ion-icon name="arrow-down-circle-outline"></ion-icon></a>
+                <a href="/img/events/{{ $event->image }}" target="_blank" class="btn btn-info view-btn"><ion-icon name="eye-outline"></ion-icon></a>    
                     @csrf
                     @method('delete')
-                    <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon>Deletar</button>
+                    <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
                 </form>
             </td>
         </tr>

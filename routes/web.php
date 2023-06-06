@@ -37,7 +37,9 @@ Route::get('/clients/create', [ClientController::class, 'create'])->middleware('
 Route::post('/clients', [ClientController:: class, 'store'])->middleware('auth');
 Route::get('/clients/{id}', [ClientController::class, 'show'])->middleware('auth');
 Route::get('/clients', [ClientController::class, 'index'])->middleware('auth');
-
+Route::delete('/clients/{id}', [ClientController::class, 'destroy'])->middleware('auth');
+Route::get('/clients/edit/{id}', [ClientController::class, 'edit'])->middleware('auth');
+Route::put('clients/update/{id}', [ClientController::class, 'update'])->middleware('auth');
 
 Route::get('/dashboard', [EventController::class, 'dashboard'])->middleware('auth');
 

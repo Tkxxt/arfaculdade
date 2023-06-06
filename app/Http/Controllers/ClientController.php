@@ -44,5 +44,28 @@ class ClientController extends Controller
 
         return view('clients.edit', ['client' => $client]);
     }
+
+    public function destroy($id){
+
+        Client::findOrFail($id)->delete();
+
+        return redirect('/clients')->with('msg', 'Cliente removido');
+
+    }
+
+    public function edit($id){
+
+        $client = Client::findOrFail($id);
+
+        return view('clients.edit', ['client' => $client]);
+
+    }
+
+    public function update(Request $request) {
+
+        Client::findOrFail($request->id)->update($request->all());
+
+        return redirect('/clients')->with('msg', 'Cliente Editado');
+    }
  
 }

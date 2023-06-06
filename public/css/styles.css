@@ -227,3 +227,7 @@ footer{
 footer p {
     margin-bottom: 0;
 }
+/* Clients */
+.dashboard-client-container form{
+    display: inline-block;
+}

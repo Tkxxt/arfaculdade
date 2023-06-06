@@ -19,6 +19,7 @@
                 <th scope="col">Telefone</th>
                 <th scope="col">CPF</th>
                 <th scope="col">Endereço</th>
+                <th scope="col">Ações</th>
             </tr>
         </thead>
     
@@ -31,7 +32,14 @@
             <td>{{ $client->telefone }}</td>
             <td>{{ $client->cpf }}</td>
             <td>{{ $client->endereco }}</td>
-            
+            <td>
+                <a href="/clients/edit/{{ $client->id }}" class="btn btn-info edit-btn"><ion-icon name="create-outline"></ion-icon></a>
+                <form action="clients/{{ $client->id }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" class="btn btn-danger delete-btn"><ion-icon name="trash-outline"></ion-icon></button>
+                </form>
+            </td>
         </tr>
         @endforeach
     </tbody>

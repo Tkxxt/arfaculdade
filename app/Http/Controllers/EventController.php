@@ -121,7 +121,7 @@ class EventController extends Controller
 
         Event::findOrFail($request->id)->update($data);
 
-        return redirect('/dashboard')->with('msg', 'Evento Editado com sucesso!');
+        return redirect('/dashboard')->with('msg', 'Contrato Editado com sucesso!');
 
     }
 
