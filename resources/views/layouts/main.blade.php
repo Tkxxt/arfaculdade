@@ -27,19 +27,19 @@
                     
                     @auth
                     <li class="nav-item">
-                        <a href="/clients/create" class="nav-link">Adicionar Clientes</a>
+                        <a href="/clients/create" class="nav-link">Adicionar clientes</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a href="/events/create" class="nav-link">Adicionar Contratos</a>
+                        <a href="/events/create" class="nav-link">Adicionar contratos</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/clients" class="nav-link">Meus Clientes</a>
+                        <a href="/clients" class="nav-link">Meus clientes</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="/dashboard" class="nav-link">Meus Contratos</a>
+                        <a href="/dashboard" class="nav-link">Meus contratos</a>
                     </li>
                     <li class="nav-item">
                         <form action="/logout" method="POST">

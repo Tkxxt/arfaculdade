@@ -37,6 +37,13 @@
                     {{ __('Entrar') }}
                 </x-button>
             </div>
+            <div class="card text-blue bg-primary py-5 d-md-down-none">
+                    <div class="card-body text-center">
+                        <div>
+                            <h2>Sem conta?</h2>
+                            <p>Crie uma agora!!</p>
+                            <a class="btn btn-lg btn-outline-light mt-3" href="{{ route('register') }}">Registrar</a>
+                        </div>
         </form>
     </x-authentication-card>
 </x-guest-layout>

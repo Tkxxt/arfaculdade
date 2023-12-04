@@ -21,22 +21,22 @@
         </select>
     </div>
     <div class="form-group">
-        <label for="date">Data do Servico:</label>
+        <label for="date">Data do serviço:</label>
         <input type="date" class="form-control" id="date" name="date">
     </div>
     <div class="form-group">
-        <label for="title">Endereco:</label>
+        <label for="title">Endereço:</label>
         <input type="text" class="form-control" id="city" name="city" placeholder="Coloque o Endereco">
     </div>
     <div class="form-group">
-        <label for="title">Servico é Recorrente?</label>
+        <label for="title">Servico é recorrente?</label>
         <select name="private" id="private" class="form-control">
             <option value="0">Não</option>
             <option value="1">Sim</option>
         </select>
     </div>
     <div class="form-group">
-        <label for="title">Descreva o Servico:</label>
+        <label for="title">Descreva o serviço:</label>
         <textarea name="description" id="description" class="form-control" placeholder="Explique o servico"></textarea>
     </div>
     <div class="form-group">
@@ -49,6 +49,9 @@
        </div>
        <div class="form-group">
         <input type="checkbox" name="items[]" value="Condensadora"> Condensadora
+       </div>
+       <div class="form-group">
+        <input type="checkbox" name="items[]" value="materiais"> Materiais de obra
        </div>
        <div class="form-group">
         <input type="checkbox" name="items[]" value="outro"> Outros: 

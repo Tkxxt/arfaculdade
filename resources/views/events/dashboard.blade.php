@@ -43,7 +43,7 @@
     </tbody>
     </table>
     @else
-    <p>Voce não tem Contratos, <a href="/events/create">Crie seu Contrato</a></p>
+    <p>Voce não tem contratos, <a href="/events/create">Crie seu contrato</a></p>
     @endif
 </div>
 
